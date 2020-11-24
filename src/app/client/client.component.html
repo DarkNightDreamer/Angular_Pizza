@@ -1,0 +1,11 @@
+<h1>HELLO xorld</h1>
+<div class="bow">
+<div *ngFor="let p of allPizzas" class="card cent" style="width: 18rem;">
+    <img class="card-img-top" src="{{p.image}}" >
+    <div class="card-body" >
+      <h5 class="card-title">{{p.name}}</h5>
+      <p class="card-text">{{p.description}}</p>
+      <a href="#" class="btn btn-primary">Order Now</a>
+    </div>
+  </div>
+</div>

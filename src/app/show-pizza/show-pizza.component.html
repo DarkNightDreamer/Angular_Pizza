@@ -1,0 +1,59 @@
+<app-accueil></app-accueil>
+<div class="card w-75 d-flex justify-content-center mx-auto mt-5 shadow-lg">
+    <!--Table-->
+    <div class="card-body bg-light">
+        <h5 class="card-title text-dark">Showing All Pizzas</h5>
+        <table class="table table-hover table-fixed">
+            <!--Table head-->
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Name</th>
+                    <th>Ingredients</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!--Table head-->
+            <!--Table body-->
+            <tbody>
+                <tr *ngFor="let p of allPizzas;let i=index">
+                    <th scope="row">{{i}}</th>
+                    <td>{{p.name}}</td>
+                    <td>{{p.ingredients}}</td>
+                    <td>
+                        <button class="btn btn-primary mr-1" style="border-radius: 30px;" (click)="openModal(p.image)">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.description}}</td>
+                    <td>
+                        <button class="btn btn-success mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                    <!-- Showing Image -->
+                </tr>
+            </tbody>
+            <!--Table body-->
+        </table>
+        <!--Table-->
+    </div>
+    <!-- <div class="backdrop" [ngStyle]="{'display':display}"></div>
+    <div class="modal" [ngStyle]="{'display':display}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">NAME</h4>
+                </div>
+                <div class="modal-body">
+                    <img #img [src]="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" (click)="onCloseHandled()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->

@@ -1,0 +1,21 @@
+.cent{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 15%;
+    text-align: center;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    display: inline-block;
+    flex-wrap: nowrap;
+    background-color: wheat;
+}
+
+.bow{
+    background-image: url("../../assets/nowomannocry.jpg");
+    margin-bottom: 40px;
+}
+h1{
+    background-image: url("../../assets/pizzaBackgroundBlur.jpg");
+}

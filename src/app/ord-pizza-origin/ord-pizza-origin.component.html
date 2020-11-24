@@ -1,0 +1,59 @@
+<div>
+    <H1>Order Your Pizza</H1>
+    
+    <h4 [ngStyle]="{'margin-top':'15%','color':'red','text-align':'center'}">Notre Top 4 des Pizza par top Nations</h4>
+    
+    <table class="table table-striped" [ngStyle]="{'margin-top':'5%'}">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Country</th>
+        <th scope="col">Pizza</th>
+        <th scope="col">Nombre de pizza acheté</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let country of countries; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+          {{ country.name }}
+        </td>
+        <td>{{ country.pizza }}</td>
+        <td>{{ country.nb | number }}</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="ooo">
+    <h4 [ngStyle]="{'margin-top':'15%','color':'red','text-align':'center'}">Join Our Empire</h4>
+
+
+
+    <div class="jumbotron loup" >
+        <h1 class="display-4">Buy A Pizza</h1>
+        <p class="lead">Choisit une pizza et amuse vous avec un gout extraoridnaire</p>
+        <hr class="my-4">
+        <p>Faire  votre  choix entre notre plusieurs saveurs</p>
+        <p class="lead">
+            <!-- router link na3loh lel components elli bech ne5demhom houni welli ba3do -->
+          <a class="btn btn-primary btn-lg" routerLinkActive="active" [routerLink]="['/add-pizza']" role="button">Achetez</a>
+        </p>
+      </div>
+
+      <div class="jumbotron loup">
+        <h1 class="display-4">Buy A Pizza</h1>
+        <p class="lead">Customize votre pizza avec plusieurs choix</p>
+        <hr class="my-4">
+        <p>Faire  votre  choix entre notre plusieurs saveurs et fait votre propre pizza</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" routerLinkActive="active" [routerLink]="['/add-pizza']" role="button">Achetez</a>
+        </p>
+      </div>
+
+
+
+
+    </div>
+    
+    
